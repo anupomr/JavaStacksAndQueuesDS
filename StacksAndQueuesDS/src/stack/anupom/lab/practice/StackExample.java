@@ -22,6 +22,29 @@ public class StackExample {//Using system Library
 		System.out.println("Non-Empty Stack : search operation "+ stack.search(1));
 		System.out.println("Non-Empty Stack : "+ stack.isEmpty());
 		
+		
+		// String Stack
+		Stack<String> stackOfCard=new Stack<>();
+		
+		
+		stackOfCard.push("Jack");
+		stackOfCard.push("Queen");
+		stackOfCard.push("King");
+		stackOfCard.push("Ace");
+		
+		System.out.println(" Stack => "+ stackOfCard);
+		System.out.println();
+		
+		String cardAtTop=stackOfCard.pop();
+		
+		System.out.println("Stack.pop() : "+ cardAtTop);	
+		System.out.println("Current Stack :  "+ stackOfCard);
+		System.out.println();
+		
+		cardAtTop =stackOfCard.peek();
+		System.out.println("Stack.peek() "+ cardAtTop);
+		System.out.println("Current Stack :  "+ stackOfCard);
+		
 	}
 
 }
