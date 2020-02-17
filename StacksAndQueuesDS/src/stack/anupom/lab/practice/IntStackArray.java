@@ -69,5 +69,12 @@ public class IntStackArray {//Stack Implementation on array
 		int result=stack[size-1];		
 		return result;
 	}
+	public static void main(String[] args) {
+		IntStackArray myStack=new IntStackArray();
+		myStack.push(5);
+		myStack.push(15);
+		myStack.push(25);
+		System.out.println("Pop Stack: " + myStack.pop());
 
+	}
 }
