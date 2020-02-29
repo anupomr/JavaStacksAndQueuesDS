@@ -49,4 +49,15 @@ public class SingleLinkedStack {
 		System.out.println(" |______|");	
 		
 	}
+	public static void main(String[] args) {
+		SingleLinkedStack S = new SingleLinkedStack();
+		S.push(1002);
+		S.push(1003);
+		S.push(1004);
+		S.push(1005);
+	
+		S.pop();
+		S.display();
+	
+	}
 }
