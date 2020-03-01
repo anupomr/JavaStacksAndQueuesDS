@@ -49,6 +49,19 @@ public class SingleLinkedStack {
 		System.out.println(" |______|");	
 		
 	}
+	public static  void transfer (SingleLinkedStack S, SingleLinkedStack T) {
+		SingleLinkedStack tempStack =new SingleLinkedStack();
+		while(!T.isEmpty()) {
+			tempStack.push(T.pop());
+		}
+		while(!S.isEmpty()) {
+			T.push(S.pop());
+		}
+		while(!tempStack.isEmpty()) {
+			S.push(tempStack.pop());
+		}
+	}
+	
 	public static void main(String[] args) {
 		SingleLinkedStack S = new SingleLinkedStack();
 		S.push(1002);
@@ -56,8 +69,22 @@ public class SingleLinkedStack {
 		S.push(1004);
 		S.push(1005);
 	
-		S.pop();
-		S.display();
+		//S.pop();
 	
+		System.out.println(" \nStack : S" );
+		S.display();
+		
+		SingleLinkedStack T = new SingleLinkedStack();
+		T.push(5002);
+		T.push(5003);
+		T.push(5004);
+		T.push(5005);
+		System.out.println(" \nStack : T" );
+		T.display();
+		
+		
+		System.out.println("\n\n After transfer S to T Sack T:");
+		transfer(S,T);
+		T.display();
 	}
 }
